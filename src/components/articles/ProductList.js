@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 const ProductList = ({ products, deleteProduct }) => {
 
     return (
@@ -13,6 +14,8 @@ const ProductList = ({ products, deleteProduct }) => {
                         <th>Marque</th>
                         <th>Prix</th>
                         <th>Qtestock</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,7 +27,8 @@ const ProductList = ({ products, deleteProduct }) => {
                             <td>{pr.marque}</td>
                             <td>{pr.prix}</td>
                             <td>{pr.qtestock}</td>
-                            <td>Action</td>
+                            <td>      <Button variant="outline-warning">Modifier</Button></td>
+                            <td>   <Button variant="outline-danger">Supprimer</Button></td>
                         </tr>
                     )}
 
