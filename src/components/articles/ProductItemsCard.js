@@ -3,10 +3,14 @@ import Itemcard from './Itemcard'
 
 const ProductItemsCard = ({ products }) => {
     return (
-        <div>
-            {products.map((pr, index) =>
-                <Itemcard pr={pr} />
-            )}
+
+        <div className="container">
+            <div style={{ "display": "flex", "flexWrap": "wrap", "justifyContent": "left" }}>
+                {products.map((pr, index) =>
+                    <Itemcard pr={pr} />
+                )}
+
+            </div>
         </div>
     )
 }
